@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { KineticSearch } from './components/search/KineticSearch'
 import { ContextPills, CONTEXTS } from './components/search/ContextPills'
 import { ResultCard, ToolResult } from './components/results/ResultCard'
@@ -13,6 +13,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [aiExamples, setAiExamples] = useState<string[]>([])
   const glowRef = useRef<HTMLDivElement>(null)
+  const prefersReducedMotion = useReducedMotion()
 
   useEffect(() => {
     const handleMove = (e: MouseEvent) => {
@@ -136,23 +137,39 @@ function App() {
         {isSearching && (
           <>
             <motion.div
+              layout
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
               className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-6"
             >
               {loading ? (
-                <div className="col-span-full flex justify-center py-20 text-secondary animate-pulse">
-                  Finding the best tools for you...
-                </div>
+                prefersReducedMotion ? (
+                  <div className="col-span-full flex justify-center py-20 text-secondary">
+                    Finding the best tools for you...
+                  </div>
+                ) : (
+                  <motion.div
+                    className="col-span-full flex justify-center py-20 text-secondary"
+                    animate={{ y: [0, -3, 0], opacity: [0.7, 1, 0.7] }}
+                    transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    Finding the best tools for you...
+                  </motion.div>
+                )
               ) : results.length > 0 ? (
                 results.map((result, index) => (
                   <ResultCard key={result.id} item={result} index={index} />
                 ))
               ) : (
-                <div className="col-span-full flex justify-center py-20 text-tertiary">
+                <motion.div
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="col-span-full flex justify-center py-20 text-tertiary"
+                >
                   No tools found for "{query}". Try adjusting your context or keywords.
-                </div>
+                </motion.div>
               )}
             </motion.div>
 
