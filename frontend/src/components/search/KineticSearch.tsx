@@ -18,7 +18,6 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
 
     return (
         <motion.div
-            layout
             className="relative w-full max-w-2xl mx-auto"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}

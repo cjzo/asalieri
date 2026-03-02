@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { KineticSearch } from './components/search/KineticSearch'
 import { ContextPills, CONTEXTS } from './components/search/ContextPills'
@@ -11,10 +11,15 @@ function App() {
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState<ToolResult[]>([])
   const [loading, setLoading] = useState(false)
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const glowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => setMousePos({ x: e.clientX, y: e.clientY })
+    const handleMove = (e: MouseEvent) => {
+      if (glowRef.current) {
+        glowRef.current.style.setProperty('--mouse-x', `${e.clientX}px`)
+        glowRef.current.style.setProperty('--mouse-y', `${e.clientY}px`)
+      }
+    }
     window.addEventListener('mousemove', handleMove)
     return () => window.removeEventListener('mousemove', handleMove)
   }, [])
@@ -55,8 +60,8 @@ function App() {
     <div className="min-h-screen relative overflow-hidden text-foreground selection:bg-accent/30 selection:text-white flex flex-col items-center">
       {/* Dynamic Background */}
       <div
+        ref={glowRef}
         className="app-grid-glow fixed inset-0 pointer-events-none z-[-1]"
-        style={{ '--mouse-x': `${mousePos.x}px`, '--mouse-y': `${mousePos.y}px` } as React.CSSProperties}
       />
       <motion.div
         className="app-vignette-glow fixed inset-0 pointer-events-none z-[-2]"
@@ -80,7 +85,7 @@ function App() {
 
         {/* Header / Brand */}
         <header className="w-full flex justify-between items-center mb-16 h-12">
-          <motion.div layoutId="brandLogo" className="text-xl font-semibold tracking-tighter text-primary cursor-pointer hover:text-accent transition-colors" onClick={handleReset}>
+          <motion.div className="text-xl font-semibold tracking-tighter text-primary cursor-pointer hover:text-accent transition-colors" onClick={handleReset}>
             asalieri
           </motion.div>
           <ThemeSwitcher />
@@ -88,7 +93,6 @@ function App() {
 
         {/* Hero Section Container */}
         <motion.div
-          layout
           initial={false}
           animate={{
             y: isSearching ? -20 : "15vh",
