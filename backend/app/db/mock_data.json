@@ -95,5 +95,101 @@
             "student": 0.7,
             "creator": 0.5
         }
+    },
+    {
+        "id": "5",
+        "name": "Jitter",
+        "category": "Animation",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Fast and simple motion design tool for the web. Like Figma for motion.",
+        "tags": [
+            "animation",
+            "motion",
+            "ui",
+            "web"
+        ],
+        "use_cases": [
+            "UI micro-interactions",
+            "Social media videos"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "creator": 0.95,
+            "student": 0.9,
+            "enterprise": 0.6
+        }
+    },
+    {
+        "id": "6",
+        "name": "LottieFiles",
+        "category": "Animation",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Platform for testing, creating, and shipping lightweight Lottie animations.",
+        "tags": [
+            "lottie",
+            "json",
+            "production",
+            "motion"
+        ],
+        "use_cases": [
+            "App onboarding animations",
+            "Web hero sections"
+        ],
+        "context_relevance": {
+            "founder": 0.7,
+            "creator": 0.8,
+            "student": 0.8,
+            "enterprise": 0.95
+        }
+    },
+    {
+        "id": "7",
+        "name": "Rive",
+        "category": "Animation",
+        "price_tier": "$$",
+        "difficulty_level": "Hard",
+        "description": "Interactive runtime animation tool built for game engines and native apps.",
+        "tags": [
+            "interactive",
+            "state-machine",
+            "runtime",
+            "games"
+        ],
+        "use_cases": [
+            "Game UI",
+            "Interactive app mascots"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "creator": 0.6,
+            "student": 0.7,
+            "enterprise": 0.9
+        }
+    },
+    {
+        "id": "8",
+        "name": "Spline",
+        "category": "3D Design",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Collaborative web-based 3D design tool to create interactive 3D experiences.",
+        "tags": [
+            "3d",
+            "webgl",
+            "interactive",
+            "modeling"
+        ],
+        "use_cases": [
+            "3D hero websites",
+            "Interactive product showcases"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.95,
+            "student": 0.9,
+            "enterprise": 0.7
+        }
     }
 ]

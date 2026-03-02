@@ -21,14 +21,24 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
 
     return (
         <motion.div
-            className="relative w-full max-w-2xl mx-auto"
+            className="relative w-full max-w-2xl mx-auto group"
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            whileHover={{ scale: 1.01 }}
+            whileTap={{ scale: 0.99 }}
         >
-            <div className="relative group">
+            <div className="relative">
                 <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none z-10">
-                    <Search className={`w-5 h-5 transition-colors duration-300 ${active ? 'text-accent' : 'text-tertiary group-focus-within:text-accent'}`} />
+                    <motion.div
+                        animate={{
+                            scale: active ? 0.9 : 1,
+                            color: active ? 'var(--accent)' : 'var(--text-sub)'
+                        }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <Search className="w-5 h-5 flex-shrink-0" />
+                    </motion.div>
                 </div>
                 <Input
                     value={query}
@@ -36,16 +46,21 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
                     onKeyDown={handleKeyDown}
                     onFocus={() => setFocused(true)}
                     onBlur={() => setFocused(false)}
-                    className={`pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface border-border/80 shadow-sm focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent transition-all duration-300 hover:border-border group-focus-within:shadow-md group-focus-within:shadow-accent/10 ${active ? 'pt-4 pb-0' : ''}`}
+                    className={`pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface/90 backdrop-blur-md border-border/80 shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent transition-all duration-300 hover:border-border/100 group-focus-within:shadow-[0_8px_40px_rgba(217,217,204,0.12)] ${active ? 'pt-5 pb-1' : ''}`}
                 />
-                <label
-                    className={`absolute left-12 whitespace-nowrap pointer-events-none transition-all duration-300 ${active
-                        ? "top-1.5 text-xs text-secondary font-medium tracking-wide"
-                        : "top-1/2 -translate-y-1/2 text-lg text-tertiary"
-                        }`}
+                <motion.label
+                    initial={false}
+                    animate={{
+                        y: active ? -12 : 0,
+                        scale: active ? 0.75 : 1,
+                        opacity: active ? 0.8 : 1,
+                    }}
+                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                    style={{ originX: 0, originY: 0.5 }}
+                    className="absolute left-12 top-1/2 -translate-y-1/2 whitespace-nowrap pointer-events-none text-tertiary tracking-wide font-medium"
                 >
                     I need a tool for...
-                </label>
+                </motion.label>
             </div>
         </motion.div>
     )
