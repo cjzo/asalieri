@@ -1,0 +1,99 @@
+[
+    {
+        "id": "1",
+        "name": "Stripe",
+        "category": "Payments",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Financial infrastructure platform for the internet.",
+        "tags": [
+            "finance",
+            "payments",
+            "api",
+            "startup"
+        ],
+        "use_cases": [
+            "Accepting payments",
+            "Billing"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "enterprise": 0.95,
+            "student": 0.2,
+            "creator": 0.8
+        }
+    },
+    {
+        "id": "2",
+        "name": "Supabase",
+        "category": "Backend",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Open source Firebase alternative.",
+        "tags": [
+            "database",
+            "backend",
+            "auth",
+            "startup"
+        ],
+        "use_cases": [
+            "User authentication",
+            "PostgreSQL Database"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "enterprise": 0.7,
+            "student": 0.8,
+            "creator": 0.3
+        }
+    },
+    {
+        "id": "3",
+        "name": "Notion",
+        "category": "Productivity",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "The all-in-one workspace for your notes, tasks, wikis, and databases.",
+        "tags": [
+            "notes",
+            "workspace",
+            "productivity",
+            "knowledge base"
+        ],
+        "use_cases": [
+            "Project management",
+            "Wiki drafting"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "enterprise": 0.8,
+            "student": 0.95,
+            "creator": 0.9,
+            "researcher": 0.9
+        }
+    },
+    {
+        "id": "4",
+        "name": "Vercel",
+        "category": "Deployment",
+        "price_tier": "$",
+        "difficulty_level": "Medium",
+        "description": "Platform for frontend frameworks and static sites, built to integrate with headless content, commerce, or database.",
+        "tags": [
+            "hosting",
+            "frontend",
+            "nextjs",
+            "serverless"
+        ],
+        "use_cases": [
+            "Website hosting",
+            "Serverless functions"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "enterprise": 0.8,
+            "student": 0.7,
+            "creator": 0.5
+        }
+    }
+]
