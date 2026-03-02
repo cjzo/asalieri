@@ -32,20 +32,20 @@ export function ThemeProvider({
 
     useEffect(() => {
         const root = window.document.documentElement
+        const favicon = document.getElementById("favicon") as HTMLLinkElement | null
+
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light"
+
+        const resolvedTheme = theme === "system" ? systemTheme : theme
 
         root.classList.remove("light", "dark")
+        root.classList.add(resolvedTheme)
 
-        if (theme === "system") {
-            const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-                .matches
-                ? "dark"
-                : "light"
-
-            root.classList.add(systemTheme)
-            return
+        if (favicon) {
+            favicon.href = resolvedTheme === "dark" ? "/logo-dark.svg" : "/logo-light.svg"
         }
-
-        root.classList.add(theme)
     }, [theme])
 
     const value = {

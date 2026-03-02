@@ -50,11 +50,8 @@ export const ContextPills = React.memo(
                             )}
                         >
                             {isSelected && (
-                                <motion.div
-                                    layout
-                                    layoutId="active-pill"
+                                <div
                                     className="absolute inset-0 bg-accent/15 border border-accent/30 rounded-full"
-                                    transition={{ type: "spring", stiffness: 400, damping: 30 }}
                                 />
                             )}
                             {isSelected ? (
