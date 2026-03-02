@@ -11,6 +11,7 @@ function App() {
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState<ToolResult[]>([])
   const [loading, setLoading] = useState(false)
+  const [aiExamples, setAiExamples] = useState<string[]>([])
   const glowRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -40,6 +41,7 @@ function App() {
       if (response.ok) {
         const data = await response.json()
         setResults(data.results)
+        setAiExamples(data.ai_examples ?? [])
       } else {
         console.error("Failed to fetch results")
       }
@@ -54,6 +56,7 @@ function App() {
     setIsSearching(false)
     setQuery('')
     setResults([])
+    setAiExamples([])
   }
 
   return (
@@ -131,26 +134,65 @@ function App() {
 
         {/* Results Container */}
         {isSearching && (
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
-            className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-6"
-          >
-            {loading ? (
-              <div className="col-span-full flex justify-center py-20 text-secondary animate-pulse">
-                Finding the best tools for you...
-              </div>
-            ) : results.length > 0 ? (
-              results.map((result, index) => (
-                <ResultCard key={result.id} item={result} index={index} />
-              ))
-            ) : (
-              <div className="col-span-full flex justify-center py-20 text-tertiary">
-                No tools found for "{query}". Try adjusting your context or keywords.
-              </div>
+          <>
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+              className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-6"
+            >
+              {loading ? (
+                <div className="col-span-full flex justify-center py-20 text-secondary animate-pulse">
+                  Finding the best tools for you...
+                </div>
+              ) : results.length > 0 ? (
+                results.map((result, index) => (
+                  <ResultCard key={result.id} item={result} index={index} />
+                ))
+              ) : (
+                <div className="col-span-full flex justify-center py-20 text-tertiary">
+                  No tools found for "{query}". Try adjusting your context or keywords.
+                </div>
+              )}
+            </motion.div>
+
+            {!loading && aiExamples.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 32 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+                className="w-full max-w-3xl mt-10 mx-auto"
+              >
+                <div className="relative overflow-hidden rounded-2xl border border-accent/20 bg-surface/80 backdrop-blur-md shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-surface/60 opacity-80 pointer-events-none" />
+                  <div className="relative px-6 py-5 border-b border-accent/15 flex items-center justify-between gap-4">
+                    <div className="flex flex-col gap-1">
+                      <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-tertiary">
+                        Example AI responses
+                      </span>
+                      <p className="text-sm text-secondary">
+                        How an AI teammate might talk through this search with you.
+                      </p>
+                    </div>
+                    <div className="hidden md:flex items-center gap-2 text-[11px] text-tertiary">
+                      <span className="inline-flex h-6 items-center rounded-full border border-border/60 bg-surface/60 px-2.5">
+                        <span className="mr-1 inline-block h-1.5 w-1.5 rounded-full bg-accent/80" />
+                        Gemini · live
+                      </span>
+                    </div>
+                  </div>
+                  <div className="relative px-6 py-5 space-y-4">
+                    {aiExamples.map((example, idx) => (
+                      <div key={idx} className="flex gap-3 text-sm leading-relaxed text-foreground/95">
+                        <span className="mt-[3px] text-accent/90">↳</span>
+                        <p>{example}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             )}
-          </motion.div>
+          </>
         )}
       </main>
     </div>
@@ -158,3 +200,4 @@ function App() {
 }
 
 export default App
+

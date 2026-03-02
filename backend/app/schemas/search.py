@@ -19,3 +19,4 @@ class ToolResult(BaseModel):
 
 class SearchResponse(BaseModel):
     results: List[ToolResult]
+    ai_examples: List[str] = []

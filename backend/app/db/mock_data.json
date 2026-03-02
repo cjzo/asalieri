@@ -191,5 +191,1105 @@
             "student": 0.9,
             "enterprise": 0.7
         }
+    },
+    {
+        "id": "9",
+        "name": "Figma",
+        "category": "Design",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Collaborative interface design tool for teams to design, prototype, and handoff.",
+        "tags": [
+            "design",
+            "ui",
+            "prototype",
+            "collaboration"
+        ],
+        "use_cases": [
+            "Product UI design",
+            "Interactive prototypes"
+        ],
+        "context_relevance": {
+            "founder": 0.95,
+            "creator": 0.9,
+            "student": 0.85,
+            "enterprise": 0.95,
+            "researcher": 0.6
+        }
+    },
+    {
+        "id": "10",
+        "name": "Framer",
+        "category": "Design",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "No-code site builder for high-fidelity marketing sites and product pages.",
+        "tags": [
+            "marketing",
+            "landing-page",
+            "no-code",
+            "design"
+        ],
+        "use_cases": [
+            "Launch landing pages",
+            "Interactive marketing sites"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.85,
+            "student": 0.7,
+            "enterprise": 0.7,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "11",
+        "name": "Linear",
+        "category": "Project Management",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Opinionated issue tracker and project management tool for modern software teams.",
+        "tags": [
+            "issues",
+            "project-management",
+            "sprints",
+            "roadmap"
+        ],
+        "use_cases": [
+            "Product roadmap planning",
+            "Issue tracking"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.5,
+            "student": 0.5,
+            "enterprise": 0.95,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "12",
+        "name": "Jira",
+        "category": "Project Management",
+        "price_tier": "$$",
+        "difficulty_level": "Hard",
+        "description": "Enterprise-grade project management and issue tracking platform.",
+        "tags": [
+            "enterprise",
+            "issues",
+            "agile",
+            "project-management"
+        ],
+        "use_cases": [
+            "Enterprise software projects",
+            "Compliance-heavy workflows"
+        ],
+        "context_relevance": {
+            "founder": 0.6,
+            "creator": 0.2,
+            "student": 0.3,
+            "enterprise": 0.98,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "13",
+        "name": "Slack",
+        "category": "Communication",
+        "price_tier": "$$",
+        "difficulty_level": "Easy",
+        "description": "Team communication platform with channels, integrations, and automation.",
+        "tags": [
+            "chat",
+            "collaboration",
+            "notifications",
+            "integrations"
+        ],
+        "use_cases": [
+            "Team messaging",
+            "Ops incident channels"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.7,
+            "student": 0.8,
+            "enterprise": 0.95,
+            "researcher": 0.7
+        }
+    },
+    {
+        "id": "14",
+        "name": "Discord",
+        "category": "Community",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Real-time voice and text chat platform popular for communities and creators.",
+        "tags": [
+            "community",
+            "chat",
+            "voice",
+            "creators"
+        ],
+        "use_cases": [
+            "Product community",
+            "Course cohort space"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "creator": 0.95,
+            "student": 0.9,
+            "enterprise": 0.4,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "15",
+        "name": "Notion Calendar",
+        "category": "Productivity",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Time-blocking calendar connected to Notion databases for scheduling work.",
+        "tags": [
+            "calendar",
+            "time-blocking",
+            "productivity",
+            "planning"
+        ],
+        "use_cases": [
+            "Founder schedule planning",
+            "Study time blocking"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.6,
+            "student": 0.9,
+            "enterprise": 0.5,
+            "researcher": 0.7
+        }
+    },
+    {
+        "id": "16",
+        "name": "Miro",
+        "category": "Collaboration",
+        "price_tier": "$$",
+        "difficulty_level": "Easy",
+        "description": "Online collaborative whiteboard for workshops, ideation, and system mapping.",
+        "tags": [
+            "whiteboard",
+            "workshop",
+            "diagram",
+            "remote"
+        ],
+        "use_cases": [
+            "Product discovery workshops",
+            "Research affinity mapping"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.6,
+            "student": 0.8,
+            "enterprise": 0.9,
+            "researcher": 0.95
+        }
+    },
+    {
+        "id": "17",
+        "name": "Whimsical",
+        "category": "Collaboration",
+        "price_tier": "$$",
+        "difficulty_level": "Easy",
+        "description": "Structured canvas tool for flowcharts, wireframes, and product specs.",
+        "tags": [
+            "wireframes",
+            "flowcharts",
+            "diagrams",
+            "product"
+        ],
+        "use_cases": [
+            "User flow diagrams",
+            "System architecture sketches"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.6,
+            "student": 0.75,
+            "enterprise": 0.75,
+            "researcher": 0.7
+        }
+    },
+    {
+        "id": "18",
+        "name": "Excalidraw",
+        "category": "Design",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Hand-drawn style diagramming tool for quick sketches and architecture.",
+        "tags": [
+            "sketch",
+            "diagram",
+            "open-source",
+            "whiteboard"
+        ],
+        "use_cases": [
+            "Architecture sketches",
+            "Teaching design concepts"
+        ],
+        "context_relevance": {
+            "founder": 0.75,
+            "creator": 0.7,
+            "student": 0.95,
+            "enterprise": 0.5,
+            "researcher": 0.8
+        }
+    },
+    {
+        "id": "19",
+        "name": "Auth0",
+        "category": "Authentication",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Authentication and authorization platform for modern applications.",
+        "tags": [
+            "auth",
+            "oauth",
+            "sso",
+            "security"
+        ],
+        "use_cases": [
+            "Enterprise SSO",
+            "Multi-tenant SaaS auth"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.3,
+            "student": 0.4,
+            "enterprise": 0.98,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "20",
+        "name": "Clerk",
+        "category": "Authentication",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Developer-friendly user management and authentication for React and Next.js apps.",
+        "tags": [
+            "auth",
+            "user-management",
+            "saas",
+            "frontend"
+        ],
+        "use_cases": [
+            "SaaS user accounts",
+            "Social login for web apps"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.4,
+            "student": 0.6,
+            "enterprise": 0.8,
+            "researcher": 0.3
+        }
+    },
+    {
+        "id": "21",
+        "name": "PlanetScale",
+        "category": "Database",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Serverless MySQL database built on Vitess with branching workflows.",
+        "tags": [
+            "database",
+            "mysql",
+            "branching",
+            "serverless"
+        ],
+        "use_cases": [
+            "Production SaaS database",
+            "Zero-downtime schema changes"
+        ],
+        "context_relevance": {
+            "founder": 0.95,
+            "creator": 0.3,
+            "student": 0.6,
+            "enterprise": 0.9,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "22",
+        "name": "Neon",
+        "category": "Database",
+        "price_tier": "$",
+        "difficulty_level": "Medium",
+        "description": "Serverless Postgres with branching, autoscaling, and generous free tier.",
+        "tags": [
+            "postgres",
+            "database",
+            "serverless",
+            "branching"
+        ],
+        "use_cases": [
+            "Side project database",
+            "Preview environments"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.5,
+            "student": 0.9,
+            "enterprise": 0.8,
+            "researcher": 0.6
+        }
+    },
+    {
+        "id": "23",
+        "name": "Railway",
+        "category": "Infrastructure",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Simple deployment platform for databases and services with per-project pricing.",
+        "tags": [
+            "hosting",
+            "infrastructure",
+            "databases",
+            "deploy"
+        ],
+        "use_cases": [
+            "Prototype backend deployments",
+            "Hackathon infra"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "creator": 0.7,
+            "student": 0.95,
+            "enterprise": 0.5,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "24",
+        "name": "Netlify",
+        "category": "Deployment",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "CI, hosting, and serverless functions for static and Jamstack sites.",
+        "tags": [
+            "hosting",
+            "jamstack",
+            "functions",
+            "ci"
+        ],
+        "use_cases": [
+            "Marketing sites",
+            "Static documentation"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.8,
+            "student": 0.85,
+            "enterprise": 0.75,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "25",
+        "name": "Render",
+        "category": "Deployment",
+        "price_tier": "$",
+        "difficulty_level": "Medium",
+        "description": "Unified cloud to host web services, static sites, background workers, and databases.",
+        "tags": [
+            "hosting",
+            "full-stack",
+            "background-jobs",
+            "databases"
+        ],
+        "use_cases": [
+            "Side project hosting",
+            "Small SaaS infrastructure"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.7,
+            "student": 0.8,
+            "enterprise": 0.7,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "26",
+        "name": "GitHub Actions",
+        "category": "CI/CD",
+        "price_tier": "$",
+        "difficulty_level": "Medium",
+        "description": "CI/CD workflows integrated directly into GitHub repositories.",
+        "tags": [
+            "ci",
+            "cd",
+            "automation",
+            "github"
+        ],
+        "use_cases": [
+            "Automated test pipelines",
+            "Deploy on push"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.4,
+            "student": 0.7,
+            "enterprise": 0.9,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "27",
+        "name": "CircleCI",
+        "category": "CI/CD",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Continuous integration and delivery platform with flexible pipelines.",
+        "tags": [
+            "ci",
+            "cd",
+            "pipelines",
+            "testing"
+        ],
+        "use_cases": [
+            "Multi-service pipelines",
+            "Enterprise test suites"
+        ],
+        "context_relevance": {
+            "founder": 0.7,
+            "creator": 0.2,
+            "student": 0.4,
+            "enterprise": 0.95,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "28",
+        "name": "Sentry",
+        "category": "Monitoring",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Error tracking and performance monitoring for apps and services.",
+        "tags": [
+            "errors",
+            "monitoring",
+            "tracing",
+            "alerts"
+        ],
+        "use_cases": [
+            "Frontend error tracking",
+            "Backend performance monitoring"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.3,
+            "student": 0.6,
+            "enterprise": 0.98,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "29",
+        "name": "Datadog",
+        "category": "Monitoring",
+        "price_tier": "$$$",
+        "difficulty_level": "Hard",
+        "description": "Observability platform combining metrics, traces, logs, and security.",
+        "tags": [
+            "observability",
+            "logs",
+            "metrics",
+            "tracing"
+        ],
+        "use_cases": [
+            "Microservices monitoring",
+            "Enterprise observability"
+        ],
+        "context_relevance": {
+            "founder": 0.7,
+            "creator": 0.1,
+            "student": 0.3,
+            "enterprise": 0.99,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "30",
+        "name": "Grafana Cloud",
+        "category": "Monitoring",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Managed observability stack with dashboards, logs, and alerts.",
+        "tags": [
+            "dashboards",
+            "metrics",
+            "logs",
+            "alerts"
+        ],
+        "use_cases": [
+            "Startup observability stack",
+            "Self-service dashboards"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "creator": 0.2,
+            "student": 0.5,
+            "enterprise": 0.9,
+            "researcher": 0.6
+        }
+    },
+    {
+        "id": "31",
+        "name": "Amplitude",
+        "category": "Analytics",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Product analytics platform for understanding user behavior and retention.",
+        "tags": [
+            "analytics",
+            "product",
+            "cohorts",
+            "funnel"
+        ],
+        "use_cases": [
+            "Retention analysis",
+            "Feature adoption tracking"
+        ],
+        "context_relevance": {
+            "founder": 0.95,
+            "creator": 0.4,
+            "student": 0.5,
+            "enterprise": 0.95,
+            "researcher": 0.9
+        }
+    },
+    {
+        "id": "32",
+        "name": "Mixpanel",
+        "category": "Analytics",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Event-based analytics for web and mobile products.",
+        "tags": [
+            "analytics",
+            "events",
+            "funnels",
+            "segmentation"
+        ],
+        "use_cases": [
+            "Signup funnel analysis",
+            "Experiment measurement"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.4,
+            "student": 0.5,
+            "enterprise": 0.9,
+            "researcher": 0.85
+        }
+    },
+    {
+        "id": "33",
+        "name": "PostHog",
+        "category": "Analytics",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Open-source product analytics with feature flags, session replay, and more.",
+        "tags": [
+            "analytics",
+            "open-source",
+            "feature-flags",
+            "session-replay"
+        ],
+        "use_cases": [
+            "Self-hosted analytics",
+            "Privacy-sensitive products"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.4,
+            "student": 0.7,
+            "enterprise": 0.8,
+            "researcher": 0.85
+        }
+    },
+    {
+        "id": "34",
+        "name": "Algolia",
+        "category": "Search",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Hosted search-as-a-service with instant, typo-tolerant results.",
+        "tags": [
+            "search",
+            "api",
+            "instant",
+            "discovery"
+        ],
+        "use_cases": [
+            "App search",
+            "E-commerce discovery"
+        ],
+        "context_relevance": {
+            "founder": 0.88,
+            "creator": 0.4,
+            "student": 0.5,
+            "enterprise": 0.95,
+            "researcher": 0.7
+        }
+    },
+    {
+        "id": "35",
+        "name": "Meilisearch",
+        "category": "Search",
+        "price_tier": "$",
+        "difficulty_level": "Medium",
+        "description": "Open-source, fast, and relevant search engine for small to mid-size projects.",
+        "tags": [
+            "search",
+            "open-source",
+            "self-hosted",
+            "instant"
+        ],
+        "use_cases": [
+            "Side project search",
+            "Internal tools search"
+        ],
+        "context_relevance": {
+            "founder": 0.8,
+            "creator": 0.5,
+            "student": 0.85,
+            "enterprise": 0.6,
+            "researcher": 0.75
+        }
+    },
+    {
+        "id": "36",
+        "name": "Contentful",
+        "category": "CMS",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Headless CMS for structured content across web and mobile.",
+        "tags": [
+            "cms",
+            "headless",
+            "content-modeling",
+            "api"
+        ],
+        "use_cases": [
+            "Marketing content hub",
+            "Multi-channel content"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.6,
+            "student": 0.4,
+            "enterprise": 0.9,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "37",
+        "name": "Sanity",
+        "category": "CMS",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Headless CMS with real-time collaboration and portable text.",
+        "tags": [
+            "cms",
+            "headless",
+            "content-studio",
+            "real-time"
+        ],
+        "use_cases": [
+            "Content-heavy sites",
+            "Editorial workflows"
+        ],
+        "context_relevance": {
+            "founder": 0.88,
+            "creator": 0.7,
+            "student": 0.5,
+            "enterprise": 0.8,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "38",
+        "name": "Webflow",
+        "category": "Design",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Visual web design tool that outputs production-ready HTML, CSS, and JS.",
+        "tags": [
+            "no-code",
+            "web-design",
+            "cms",
+            "hosting"
+        ],
+        "use_cases": [
+            "Marketing websites",
+            "Client projects"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.95,
+            "student": 0.75,
+            "enterprise": 0.7,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "39",
+        "name": "Canva",
+        "category": "Design",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Template-based design tool for quick graphics, decks, and social posts.",
+        "tags": [
+            "graphics",
+            "templates",
+            "presentations",
+            "social-media"
+        ],
+        "use_cases": [
+            "Pitch decks",
+            "Social media assets"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.98,
+            "student": 0.9,
+            "enterprise": 0.6,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "40",
+        "name": "Loom",
+        "category": "Communication",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Async video messaging for walkthroughs, updates, and feedback.",
+        "tags": [
+            "video",
+            "async",
+            "feedback",
+            "communication"
+        ],
+        "use_cases": [
+            "Product demos",
+            "Code review walkthroughs"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.8,
+            "student": 0.75,
+            "enterprise": 0.85,
+            "researcher": 0.7
+        }
+    },
+    {
+        "id": "41",
+        "name": "Zapier",
+        "category": "Automation",
+        "price_tier": "$$",
+        "difficulty_level": "Easy",
+        "description": "No-code automation tool to connect apps and automate workflows.",
+        "tags": [
+            "automation",
+            "no-code",
+            "integrations",
+            "workflows"
+        ],
+        "use_cases": [
+            "Marketing automation",
+            "Internal ops workflows"
+        ],
+        "context_relevance": {
+            "founder": 0.95,
+            "creator": 0.7,
+            "student": 0.7,
+            "enterprise": 0.85,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "42",
+        "name": "Make",
+        "category": "Automation",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Visual automation platform with advanced routing and data transformations.",
+        "tags": [
+            "automation",
+            "workflows",
+            "integrations",
+            "routing"
+        ],
+        "use_cases": [
+            "Complex data pipelines",
+            "Product-led sales automation"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.6,
+            "student": 0.6,
+            "enterprise": 0.8,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "43",
+        "name": "HubSpot",
+        "category": "CRM",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "CRM and marketing automation platform for sales and growth teams.",
+        "tags": [
+            "crm",
+            "marketing",
+            "sales",
+            "automation"
+        ],
+        "use_cases": [
+            "B2B sales pipeline",
+            "Email nurturing"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.3,
+            "student": 0.3,
+            "enterprise": 0.95,
+            "researcher": 0.4
+        }
+    },
+    {
+        "id": "44",
+        "name": "Airtable",
+        "category": "Database",
+        "price_tier": "$$",
+        "difficulty_level": "Easy",
+        "description": "Spreadsheet-database hybrid for flexible data modeling and workflows.",
+        "tags": [
+            "database",
+            "no-code",
+            "spreadsheets",
+            "workflows"
+        ],
+        "use_cases": [
+            "Lightweight CRM",
+            "Research repositories"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.7,
+            "student": 0.95,
+            "enterprise": 0.8,
+            "researcher": 0.9
+        }
+    },
+    {
+        "id": "45",
+        "name": "Retool",
+        "category": "Internal Tools",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Internal tool builder for connecting databases and APIs with drag-and-drop UI.",
+        "tags": [
+            "internal-tools",
+            "admin",
+            "crud",
+            "dashboard"
+        ],
+        "use_cases": [
+            "Operations dashboards",
+            "Support tooling"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.3,
+            "student": 0.5,
+            "enterprise": 0.95,
+            "researcher": 0.5
+        }
+    },
+    {
+        "id": "46",
+        "name": "Tally",
+        "category": "Forms",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "Simple form builder with generous free tier and modern UX.",
+        "tags": [
+            "forms",
+            "no-code",
+            "surveys",
+            "landing"
+        ],
+        "use_cases": [
+            "Beta waitlists",
+            "User feedback surveys"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.7,
+            "student": 0.9,
+            "enterprise": 0.6,
+            "researcher": 0.85
+        }
+    },
+    {
+        "id": "47",
+        "name": "Typeform",
+        "category": "Forms",
+        "price_tier": "$$",
+        "difficulty_level": "Easy",
+        "description": "Conversational form builder for surveys, quizzes, and lead capture.",
+        "tags": [
+            "forms",
+            "surveys",
+            "conversational",
+            "lead-gen"
+        ],
+        "use_cases": [
+            "Onboarding surveys",
+            "Market research"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.6,
+            "student": 0.85,
+            "enterprise": 0.75,
+            "researcher": 0.9
+        }
+    },
+    {
+        "id": "48",
+        "name": "Paddle",
+        "category": "Payments",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Merchant-of-record platform for SaaS billing, tax, and compliance.",
+        "tags": [
+            "payments",
+            "subscriptions",
+            "tax",
+            "compliance"
+        ],
+        "use_cases": [
+            "Global SaaS billing",
+            "EU VAT handling"
+        ],
+        "context_relevance": {
+            "founder": 0.9,
+            "creator": 0.3,
+            "student": 0.2,
+            "enterprise": 0.9,
+            "researcher": 0.3
+        }
+    },
+    {
+        "id": "49",
+        "name": "Braintree",
+        "category": "Payments",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Full-stack payments platform with cards, wallets, and local methods.",
+        "tags": [
+            "payments",
+            "checkout",
+            "subscriptions",
+            "gateway"
+        ],
+        "use_cases": [
+            "Marketplace payments",
+            "Subscription billing"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.3,
+            "student": 0.2,
+            "enterprise": 0.9,
+            "researcher": 0.3
+        }
+    },
+    {
+        "id": "50",
+        "name": "OpenAI API",
+        "category": "AI",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "API access to language and vision models for building AI features.",
+        "tags": [
+            "ai",
+            "llm",
+            "nlp",
+            "generation"
+        ],
+        "use_cases": [
+            "AI assistants",
+            "Content generation"
+        ],
+        "context_relevance": {
+            "founder": 0.95,
+            "creator": 0.9,
+            "student": 0.9,
+            "enterprise": 0.9,
+            "researcher": 0.98
+        }
+    },
+    {
+        "id": "51",
+        "name": "LangSmith",
+        "category": "AI",
+        "price_tier": "$$",
+        "difficulty_level": "Medium",
+        "description": "Observability and evaluation platform for LLM applications.",
+        "tags": [
+            "ai",
+            "observability",
+            "evaluation",
+            "traces"
+        ],
+        "use_cases": [
+            "LLM app debugging",
+            "Prompt evaluation"
+        ],
+        "context_relevance": {
+            "founder": 0.85,
+            "creator": 0.4,
+            "student": 0.6,
+            "enterprise": 0.9,
+            "researcher": 0.95
+        }
+    },
+    {
+        "id": "52",
+        "name": "Cursor",
+        "category": "Developer Tools",
+        "price_tier": "$",
+        "difficulty_level": "Easy",
+        "description": "AI-first code editor that accelerates building and refactoring software.",
+        "tags": [
+            "editor",
+            "ai",
+            "developer-tools",
+            "productivity"
+        ],
+        "use_cases": [
+            "Rapid prototyping",
+            "Refactoring legacy code"
+        ],
+        "context_relevance": {
+            "founder": 0.95,
+            "creator": 0.7,
+            "student": 0.98,
+            "enterprise": 0.85,
+            "researcher": 0.9
+        }
     }
 ]
