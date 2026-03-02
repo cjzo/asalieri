@@ -1,3 +1,4 @@
+import React from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
@@ -8,7 +9,7 @@ interface ContextPillsProps {
     onSelect: (ctx: string) => void
 }
 
-export function ContextPills({ selected, onSelect }: ContextPillsProps) {
+export const ContextPills = React.memo(function ContextPills({ selected, onSelect }: ContextPillsProps) {
     return (
         <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -29,6 +30,7 @@ export function ContextPills({ selected, onSelect }: ContextPillsProps) {
                 >
                     {selected === ctx && (
                         <motion.div
+                            layout
                             layoutId="active-pill"
                             className="absolute inset-0 bg-accent/15 border border-accent/30 rounded-full"
                             transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -39,4 +41,4 @@ export function ContextPills({ selected, onSelect }: ContextPillsProps) {
             ))}
         </motion.div>
     )
-}
+})

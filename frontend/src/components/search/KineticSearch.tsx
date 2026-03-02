@@ -10,6 +10,9 @@ interface KineticSearchProps {
 }
 
 export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps) {
+    const [focused, setFocused] = React.useState(false)
+    const active = focused || query.length > 0
+
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter' && query.trim()) {
             onSubmit()
@@ -24,16 +27,25 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
         >
             <div className="relative group">
-                <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none">
-                    <Search className="w-5 h-5 text-tertiary group-focus-within:text-accent transition-colors duration-300" />
+                <div className="absolute inset-y-0 left-4 flex items-center pointer-events-none z-10">
+                    <Search className={`w-5 h-5 transition-colors duration-300 ${active ? 'text-accent' : 'text-tertiary group-focus-within:text-accent'}`} />
                 </div>
                 <Input
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    placeholder="I need a tool for..."
-                    className="pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface border-border/80 shadow-sm focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent transition-all duration-300 hover:border-border group-focus-within:shadow-md group-focus-within:shadow-accent/10"
+                    onFocus={() => setFocused(true)}
+                    onBlur={() => setFocused(false)}
+                    className={`pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface border-border/80 shadow-sm focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent transition-all duration-300 hover:border-border group-focus-within:shadow-md group-focus-within:shadow-accent/10 ${active ? 'pt-4 pb-0' : ''}`}
                 />
+                <label
+                    className={`absolute left-12 whitespace-nowrap pointer-events-none transition-all duration-300 ${active
+                        ? "top-1.5 text-xs text-secondary font-medium tracking-wide"
+                        : "top-1/2 -translate-y-1/2 text-lg text-tertiary"
+                        }`}
+                >
+                    I need a tool for...
+                </label>
             </div>
         </motion.div>
     )
