@@ -33,7 +33,7 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
                     onChange={(e) => setQuery(e.target.value)}
                     onKeyDown={handleKeyDown}
                     placeholder="I need a tool for..."
-                    className="pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface border-border/50 shadow-lg shadow-black/20 focus-visible:ring-2 focus-visible:ring-accent/50 focus-visible:border-accent transition-all duration-300 group-focus-within:shadow-accent/5"
+                    className="pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface border-border/80 shadow-sm focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent transition-all duration-300 hover:border-border group-focus-within:shadow-md group-focus-within:shadow-accent/10"
                 />
             </div>
         </motion.div>

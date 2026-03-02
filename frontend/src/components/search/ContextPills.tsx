@@ -21,13 +21,20 @@ export function ContextPills({ selected, onSelect }: ContextPillsProps) {
                     key={ctx}
                     onClick={() => onSelect(ctx)}
                     className={cn(
-                        "px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border",
+                        "relative px-4 py-1.5 rounded-full text-sm font-medium transition-colors duration-200 border",
                         selected === ctx
-                            ? "bg-accent/10 border-accent/30 text-accent glow-subtle"
+                            ? "border-transparent text-primary"
                             : "bg-surface/50 border-border text-secondary hover:text-primary hover:border-secondary/50"
                     )}
                 >
-                    {ctx}
+                    {selected === ctx && (
+                        <motion.div
+                            layoutId="active-pill"
+                            className="absolute inset-0 bg-accent/15 border border-accent/30 rounded-full"
+                            transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                        />
+                    )}
+                    <span className="relative z-10">{ctx}</span>
                 </button>
             ))}
         </motion.div>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { Monitor, Moon, Sun } from "lucide-react"
-import { useTheme } from "./theme-provider"
-import { cn } from "../lib/utils"
+import { useTheme } from "../theme-provider"
+import { cn } from "../../lib/utils"
 
 export function ThemeSwitcher() {
     const { theme, setTheme } = useTheme()

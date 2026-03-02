@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { KineticSearch } from './components/search/KineticSearch'
 import { ContextPills, CONTEXTS } from './components/search/ContextPills'
@@ -11,6 +11,13 @@ function App() {
   const [isSearching, setIsSearching] = useState(false)
   const [results, setResults] = useState<ToolResult[]>([])
   const [loading, setLoading] = useState(false)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => setMousePos({ x: e.clientX, y: e.clientY })
+    window.addEventListener('mousemove', handleMove)
+    return () => window.removeEventListener('mousemove', handleMove)
+  }, [])
 
   const handleSearch = async () => {
     if (!query.trim()) return
@@ -46,14 +53,25 @@ function App() {
 
   return (
     <div className="min-h-screen relative overflow-hidden text-foreground selection:bg-accent/30 selection:text-white flex flex-col items-center">
+      {/* Dynamic Background */}
+      <div
+        className="app-grid-glow fixed inset-0 pointer-events-none z-[-1]"
+        style={{ '--mouse-x': `${mousePos.x}px`, '--mouse-y': `${mousePos.y}px` } as React.CSSProperties}
+      />
+      <motion.div
+        className="app-vignette-glow fixed inset-0 pointer-events-none z-[-2]"
+        animate={{ opacity: isSearching ? 0.7 : 1 }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+      />
+
       {/* Background subtly shifts depth */}
       <motion.div
-        className="fixed inset-0 pointer-events-none z-[-1]"
-        initial={{ background: 'radial-gradient(circle at 50% 50%, #14161A 0%, #0E0F11 100%)' }}
+        className="fixed inset-0 pointer-events-none z-[-3]"
+        initial={{ background: 'radial-gradient(circle at 50% 50%, var(--surface) 0%, var(--bg) 100%)' }}
         animate={{
           background: isSearching
-            ? 'radial-gradient(circle at 50% 0%, #1a1e27 0%, #0E0F11 100%)'
-            : 'radial-gradient(circle at 50% 50%, #14161A 0%, #0E0F11 100%)'
+            ? 'radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--surface) 60%, var(--accent) 5%), var(--bg) 100%)'
+            : 'radial-gradient(circle at 50% 50%, var(--surface) 0%, var(--bg) 100%)'
         }}
         transition={{ duration: 1, ease: 'easeInOut' }}
       />

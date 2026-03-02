@@ -1,33 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0E0F11;
-  --color-foreground: #F5F7FA;
-  --color-surface: #14161A;
-  
-  --color-primary: #F5F7FA;
-  --color-secondary: #A0A4AB;
-  --color-tertiary: #6B717A;
-  
-  --color-accent: #4C7DFF;
-  --color-accent-hover: #3A62D7;
+  --color-background: var(--bg);
+  --color-foreground: var(--text-main);
+  --color-surface: var(--surface);
 
-  --color-border: #2A2E35;
+  --color-primary: var(--text-main);
+  --color-secondary: var(--text-sub);
+  --color-tertiary: color-mix(in srgb, var(--text-sub) 70%, transparent);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: color-mix(in srgb, var(--accent) 80%, black);
+
+  --color-border: var(--border);
 }
 
 @layer base {
-  :root {
-    --background: #0E0F11;
-    --foreground: #F5F7FA;
+
+  /* Light Mode (Default) */
+  :root,
+  .light {
+    --bg: #F9F9F7;
+    --surface: #FFFFFF;
+    --border: #E8E8E1;
+    --text-main: #1A1A18;
+    --text-sub: #70706B;
+    --accent: #B5B5A1;
   }
-  
+
+  /* Dark Mode */
+  .dark {
+    --bg: #080807;
+    --surface: #121211;
+    --border: #242423;
+    --text-main: #F5F5F3;
+    --text-sub: #888883;
+    --accent: #D9D9CC;
+  }
+
   * {
     border-color: var(--color-border);
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--bg);
+    color: var(--text-main);
     font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .app-grid-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle 600px at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        color-mix(in srgb, var(--accent) 15%, transparent),
+        transparent 80%);
+    z-index: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .app-vignette-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at center,
+        transparent 30%,
+        color-mix(in srgb, var(--bg) 80%, transparent) 100%);
+    z-index: 0;
   }
 }
