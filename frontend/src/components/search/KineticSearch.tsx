@@ -6,15 +6,17 @@ import { Search } from "lucide-react"
 interface KineticSearchProps {
     query: string
     setQuery: (q: string) => void
-    onSubmit: () => void
+    onSubmit?: () => void
+    placeholder?: string
+    label?: string
 }
 
-export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps) {
+export function KineticSearch({ query, setQuery, onSubmit, placeholder, label }: KineticSearchProps) {
     const [focused, setFocused] = React.useState(false)
     const active = focused || query.length > 0
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === 'Enter' && query.trim()) {
+        if (e.key === 'Enter' && query.trim() && onSubmit) {
             onSubmit()
         }
     }
@@ -46,6 +48,7 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
                     onKeyDown={handleKeyDown}
                     onFocus={() => setFocused(true)}
                     onBlur={() => setFocused(false)}
+                    placeholder={!active && placeholder ? placeholder : undefined}
                     className={`pl-12 pr-4 h-16 text-lg rounded-2xl bg-surface/90 backdrop-blur-md border-border/80 shadow-[0_8px_30px_rgb(0,0,0,0.12)] focus-visible:ring-1 focus-visible:ring-accent/40 focus-visible:border-accent transition-all duration-300 hover:border-border/100 group-focus-within:shadow-[0_8px_40px_rgba(217,217,204,0.12)] ${active ? 'pt-5 pb-1' : ''}`}
                 />
                 <motion.label
@@ -53,13 +56,13 @@ export function KineticSearch({ query, setQuery, onSubmit }: KineticSearchProps)
                     animate={{
                         y: active ? -12 : 0,
                         scale: active ? 0.75 : 1,
-                        opacity: active ? 0.8 : 1,
+                        opacity: active ? 0.8 : 0, // only show if active, or customize based on usage
                     }}
                     transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     style={{ originX: 0, originY: 0.5 }}
                     className="absolute left-12 top-1/2 -translate-y-1/2 whitespace-nowrap pointer-events-none text-tertiary tracking-wide font-medium"
                 >
-                    I need a tool for...
+                    {label || "Search terms..."}
                 </motion.label>
             </div>
         </motion.div>
