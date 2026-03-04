@@ -153,34 +153,35 @@ export function MarkdownPreview() {
                             </div>
 
                             <div className="flex-grow p-6 overflow-y-auto custom-scrollbar bg-transparent">
-                                <ReactMarkdown
-                                    remarkPlugins={[remarkGfm]}
-                                    className="prose-custom max-w-none text-primary break-words leading-relaxed"
-                                    components={{
-                                        h1: ({ node, ...props }) => <h1 className="text-3xl font-bold mt-8 mb-4 border-b border-border/50 pb-2 text-primary" {...props} />,
-                                        h2: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-6 mb-4 text-primary" {...props} />,
-                                        h3: ({ node, ...props }) => <h3 className="text-xl font-medium mt-6 mb-3 text-primary" {...props} />,
-                                        h4: ({ node, ...props }) => <h4 className="text-lg font-medium mt-4 mb-2 text-primary" {...props} />,
-                                        p: ({ node, ...props }) => <p className="mb-4 text-secondary leading-7" {...props} />,
-                                        a: ({ node, ...props }) => <a className="text-accent hover:text-accent-hover underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer" {...props} />,
-                                        ul: ({ node, ...props }) => <ul className="list-disc list-inside mb-4 pl-4 space-y-1 text-secondary" {...props} />,
-                                        ol: ({ node, ...props }) => <ol className="list-decimal list-inside mb-4 pl-4 space-y-1 text-secondary" {...props} />,
-                                        li: ({ node, ...props }) => <li className="marker:text-tertiary" {...props} />,
-                                        blockquote: ({ node, ...props }) => <blockquote className="border-l-4 border-accent/50 pl-4 py-1 mb-4 italic text-tertiary bg-accent/5 rounded-r-lg" {...props} />,
-                                        code: ({ node, inline, ...props }: any) =>
-                                            inline
-                                                ? <code className="bg-surface/80 border border-border/50 text-accent font-mono text-[0.85em] px-1.5 py-0.5 rounded-md" {...props} />
-                                                : <code className="block bg-[#0d1117] text-[#c9d1d9] font-mono text-sm p-4 overflow-x-auto rounded-xl border border-border/30 shadow-inner mb-4 custom-scrollbar" {...props} />,
-                                        pre: ({ node, ...props }) => <pre className="my-0" {...props} />,
-                                        table: ({ node, ...props }) => <div className="overflow-x-auto mb-4 border border-border/50 rounded-xl"><table className="w-full text-left border-collapse" {...props} /></div>,
-                                        th: ({ node, ...props }) => <th className="bg-surface/50 border-b border-border/50 px-4 py-3 font-semibold text-primary" {...props} />,
-                                        td: ({ node, ...props }) => <td className="border-b border-border/20 px-4 py-3 text-secondary" {...props} />,
-                                        hr: ({ node, ...props }) => <hr className="my-8 border-t border-border/50" {...props} />,
-                                        img: ({ node, ...props }) => <img className="max-w-full h-auto rounded-xl border border-border/50 shadow-sm mb-4" {...props} />
-                                    }}
-                                >
-                                    {markdown}
-                                </ReactMarkdown>
+                                <div className="prose-custom max-w-none text-primary break-words leading-relaxed">
+                                    <ReactMarkdown
+                                        remarkPlugins={[remarkGfm]}
+                                        components={{
+                                            h1: ({ node, ...props }) => <h1 className="text-3xl font-bold mt-8 mb-4 border-b border-border/50 pb-2 text-primary" {...props} />,
+                                            h2: ({ node, ...props }) => <h2 className="text-2xl font-semibold mt-6 mb-4 text-primary" {...props} />,
+                                            h3: ({ node, ...props }) => <h3 className="text-xl font-medium mt-6 mb-3 text-primary" {...props} />,
+                                            h4: ({ node, ...props }) => <h4 className="text-lg font-medium mt-4 mb-2 text-primary" {...props} />,
+                                            p: ({ node, ...props }) => <p className="mb-4 text-secondary leading-7" {...props} />,
+                                            a: ({ node, ...props }) => <a className="text-accent hover:text-accent-hover underline underline-offset-2 transition-colors" target="_blank" rel="noopener noreferrer" {...props} />,
+                                            ul: ({ node, ...props }) => <ul className="list-disc list-inside mb-4 pl-4 space-y-1 text-secondary" {...props} />,
+                                            ol: ({ node, ...props }) => <ol className="list-decimal list-inside mb-4 pl-4 space-y-1 text-secondary" {...props} />,
+                                            li: ({ node, ...props }) => <li className="marker:text-tertiary" {...props} />,
+                                            blockquote: ({ node, ...props }) => <blockquote className="border-l-4 border-accent/50 pl-4 py-1 mb-4 italic text-tertiary bg-accent/5 rounded-r-lg" {...props} />,
+                                            code: ({ node, inline, ...props }: any) =>
+                                                inline
+                                                    ? <code className="bg-surface/80 border border-border/50 text-accent font-mono text-[0.85em] px-1.5 py-0.5 rounded-md" {...props} />
+                                                    : <code className="block bg-[#0d1117] text-[#c9d1d9] font-mono text-sm p-4 overflow-x-auto rounded-xl border border-border/30 shadow-inner mb-4 custom-scrollbar" {...props} />,
+                                            pre: ({ node, ...props }) => <pre className="my-0" {...props} />,
+                                            table: ({ node, ...props }) => <div className="overflow-x-auto mb-4 border border-border/50 rounded-xl"><table className="w-full text-left border-collapse" {...props} /></div>,
+                                            th: ({ node, ...props }) => <th className="bg-surface/50 border-b border-border/50 px-4 py-3 font-semibold text-primary" {...props} />,
+                                            td: ({ node, ...props }) => <td className="border-b border-border/20 px-4 py-3 text-secondary" {...props} />,
+                                            hr: ({ node, ...props }) => <hr className="my-8 border-t border-border/50" {...props} />,
+                                            img: ({ node, ...props }) => <img className="max-w-full h-auto rounded-xl border border-border/50 shadow-sm mb-4" {...props} />
+                                        }}
+                                    >
+                                        {markdown}
+                                    </ReactMarkdown>
+                                </div>
                             </div>
                         </div>
                     </motion.div>

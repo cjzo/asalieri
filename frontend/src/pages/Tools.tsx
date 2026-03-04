@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { Search, Compass } from 'lucide-react'
+import { Compass } from 'lucide-react'
 import { TOOLS, CATEGORIES, ToolCategory } from '../config/tools'
 import { KineticSearch } from '../components/search/KineticSearch'
 

@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Button } from '../../components/ui/button'
-import { SplitSquareHorizontal, Copy, Trash2, ArrowRightLeft } from 'lucide-react'
+import { SplitSquareHorizontal, Trash2, ArrowRightLeft } from 'lucide-react'
 import { diffWordsWithSpace, diffLines } from 'diff'
 
 export function DiffChecker() {
@@ -19,10 +19,6 @@ export function DiffChecker() {
         }
     }, [originalText, modifiedText, mode])
 
-    const clearAll = () => {
-        setOriginalText('')
-        setModifiedText('')
-    }
 
     const swapTexts = () => {
         setOriginalText(modifiedText)
