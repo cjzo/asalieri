@@ -115,13 +115,13 @@ export function PasswordGenerator() {
                                 <Input
                                     value={password}
                                     readOnly
-                                    className="font-mono text-2xl tracking-wider text-center md:text-left h-16 bg-surface/50 pr-24 border-accent/20 focus-visible:ring-accent/50"
+                                    className="font-mono text-2xl tracking-wider text-center md:text-left h-16 bg-transparent pr-24 border-accent/20 focus-visible:ring-accent/50"
                                     placeholder="Select options to generate"
                                 />
                                 <div className="absolute right-2 top-2 bottom-2 flex items-center gap-1">
                                     <Button
                                         onClick={generatePassword}
-                                        className="h-12 w-12 p-0 bg-surface/50 text-secondary hover:text-primary hover:bg-surface border border-border/50"
+                                        className="h-12 w-12 p-0 bg-transparent text-secondary hover:text-primary hover:bg-surface border border-border/50"
                                         title="Regenerate"
                                     >
                                         <RefreshCw className="w-5 h-5" />
@@ -207,7 +207,7 @@ export function PasswordGenerator() {
 
                     </div>
                 </motion.div>
-            </div>
-        </div>
+            </div >
+        </div >
     )
 }

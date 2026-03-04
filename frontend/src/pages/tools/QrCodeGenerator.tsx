@@ -41,7 +41,7 @@ export function QrCodeGenerator() {
                         <QrCode className="w-8 h-8" />
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-primary mb-4">
+                    <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-primary mb-4">
                         QR Generator
                     </h1>
                     <p className="text-lg text-secondary max-w-xl mx-auto font-medium">
@@ -65,8 +65,8 @@ export function QrCodeGenerator() {
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                className="w-full h-32 bg-surface/50 border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all resize-none shadow-inner"
-                                placeholder="Enter text to encode..."
+                                placeholder="Enter text or URL to generate QR code..."
+                                className="w-full h-32 bg-transparent border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all resize-none shadow-inner"
                             />
                         </div>
 

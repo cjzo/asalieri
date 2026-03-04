@@ -63,7 +63,7 @@ export function UrlEncoderDecoder() {
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                className="w-full flex-grow min-h-[200px] bg-surface/50 border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all font-mono text-sm resize-none shadow-inner placeholder:text-tertiary"
+                                className="w-full flex-grow min-h-[200px] bg-transparent border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all font-mono text-sm resize-none shadow-inner placeholder:text-tertiary"
                                 placeholder="Enter text or URL to encode/decode..."
                             />
                             <div className="flex flex-wrap items-center gap-3 mt-4">

@@ -84,7 +84,7 @@ export function WordCounter() {
                         <FileText className="w-8 h-8" />
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-primary mb-4">
+                    <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-primary mb-4">
                         Word Counter
                     </h1>
                     <p className="text-lg text-secondary max-w-xl mx-auto font-medium">
@@ -106,20 +106,16 @@ export function WordCounter() {
                             </label>
                             <div className="flex gap-2">
                                 <Button
-                                    variant="ghost"
-                                    size="sm"
                                     onClick={clearText}
                                     disabled={!text}
-                                    className="h-8 text-xs text-tertiary hover:text-red-500 hover:bg-red-500/10"
+                                    className="h-8 text-xs !bg-transparent !text-tertiary hover:!text-red-500 hover:!bg-red-500/10 !shadow-none !px-2"
                                 >
                                     <X className="w-4 h-4 mr-1" /> Clear
                                 </Button>
                                 <Button
-                                    variant="ghost"
-                                    size="sm"
                                     onClick={handleCopy}
                                     disabled={!text}
-                                    className="h-8 text-xs text-tertiary hover:text-primary hover:bg-surface/50"
+                                    className="h-8 text-xs !bg-transparent !text-tertiary hover:!text-primary hover:!bg-surface/50 !shadow-none !px-2"
                                 >
                                     {copied ? <Check className="w-4 h-4 mr-1 text-emerald-500" /> : <Copy className="w-4 h-4 mr-1" />}
                                     {copied ? 'Copied' : 'Copy'}
@@ -131,7 +127,7 @@ export function WordCounter() {
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                             placeholder="Start typing or paste your document here..."
-                            className="w-full flex-grow bg-surface/50 border border-border/50 rounded-xl p-5 text-primary text-lg focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all resize-none shadow-inner leading-relaxed"
+                            className="w-full flex-grow bg-transparent border border-border/50 rounded-xl p-5 text-primary text-lg focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all resize-none shadow-inner leading-relaxed"
                             spellCheck="false"
                         />
                     </motion.div>

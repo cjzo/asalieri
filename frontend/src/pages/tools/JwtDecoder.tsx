@@ -73,7 +73,7 @@ export function JwtDecoder() {
                         <textarea
                             value={token}
                             onChange={(e) => setToken(e.target.value)}
-                            className="w-full h-40 bg-surface/50 border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all font-mono text-sm resize-none shadow-inner placeholder:text-tertiary"
+                            className="w-full h-40 bg-transparent border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all font-mono text-sm resize-none shadow-inner placeholder:text-tertiary"
                             placeholder="ey..."
                             spellCheck={false}
                         />

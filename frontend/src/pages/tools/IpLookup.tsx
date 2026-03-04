@@ -111,7 +111,7 @@ export function IpLookup() {
                                 onChange={(e) => setIpInput(e.target.value)}
                                 onKeyDown={(e) => e.key === 'Enter' && fetchIpInfo()}
                                 placeholder="Enter IPv4 or IPv6..."
-                                className="w-full h-14 pl-12 pr-28 bg-surface/50 border border-border/50 rounded-xl text-primary focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all shadow-inner text-sm font-mono backdrop-blur-xl"
+                                className="w-full h-14 pl-12 pr-28 bg-transparent border border-border/50 rounded-xl text-primary focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all shadow-inner text-sm font-mono backdrop-blur-xl"
                             />
                             <div className="absolute inset-y-0 right-2 flex items-center">
                                 <Button

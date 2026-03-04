@@ -70,7 +70,7 @@ export function TextEncryption() {
                         {isEncrypt ? <Lock className="w-8 h-8" /> : <Unlock className="w-8 h-8" />}
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-black tracking-tighter text-primary mb-4">
+                    <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-primary mb-4">
                         AES Text Encryption
                     </h1>
                     <p className="text-lg text-secondary max-w-xl mx-auto font-medium">
@@ -98,7 +98,7 @@ export function TextEncryption() {
                                 value={secretKey}
                                 onChange={(e) => setSecretKey(e.target.value)}
                                 placeholder="Enter Secret Key..."
-                                className="w-full h-14 px-6 bg-surface/50 border border-border/50 rounded-xl text-primary focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all font-mono text-sm shadow-inner"
+                                className="w-full h-14 px-6 bg-transparent border border-border/50 rounded-xl text-primary focus:outline-none focus:border-accent/50 focus:ring-2 focus:ring-accent/50 transition-all font-mono text-sm shadow-inner"
                             />
                         </div>
                     </div>

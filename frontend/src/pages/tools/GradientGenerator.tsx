@@ -104,7 +104,7 @@ export function GradientGenerator() {
                         <Palette className="w-8 h-8" />
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-primary mb-4">
+                    <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-primary mb-4">
                         Gradient Matrix
                     </h1>
                     <p className="text-lg text-secondary max-w-xl mx-auto font-medium">

@@ -91,7 +91,7 @@ export function XmlFormatter() {
                     >
                         <Code className="w-8 h-8" />
                     </motion.div>
-                    <h1 className="text-4xl md:text-6xl font-medium tracking-tight text-primary mb-4">
+                    <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-primary mb-4">
                         XML Formatter
                     </h1>
                     <p className="text-lg text-secondary max-w-xl mx-auto">
@@ -115,9 +115,9 @@ export function XmlFormatter() {
                             <textarea
                                 value={input}
                                 onChange={(e) => setInput(e.target.value)}
-                                className="w-full flex-grow min-h-[300px] bg-surface/50 border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all font-mono text-sm resize-none shadow-inner placeholder:text-tertiary/50"
-                                placeholder="<root>\n  <node>Paste XML here</node>\n</root>"
-                                spellCheck={false}
+                                placeholder="Paste XML here..."
+                                className="w-full flex-grow min-h-[300px] bg-transparent border border-border/50 rounded-xl p-4 text-primary focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent/50 transition-all font-mono text-sm resize-none shadow-inner placeholder:text-tertiary/50"
+                                spellCheck="false"
                             />
 
                             <div className="flex gap-3 mt-4">
