@@ -8,6 +8,7 @@ import { PasswordGenerator } from './pages/tools/PasswordGenerator'
 import { JsonFormatter } from './pages/tools/JsonFormatter'
 import { UuidGenerator } from './pages/tools/UuidGenerator'
 import { Base64Encoder } from './pages/tools/Base64Encoder'
+import { AvailabilityCalendar } from './pages/tools/AvailabilityCalendar'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/tools/json" element={<JsonFormatter />} />
           <Route path="/tools/uuid" element={<UuidGenerator />} />
           <Route path="/tools/base64" element={<Base64Encoder />} />
+          <Route path="/tools/calendar" element={<AvailabilityCalendar />} />
         </Route>
       </Routes>
     </BrowserRouter>

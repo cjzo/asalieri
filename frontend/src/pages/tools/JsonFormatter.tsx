@@ -19,8 +19,12 @@ export function JsonFormatter() {
             const parsed = JSON.parse(input)
             setOutput(JSON.stringify(parsed, null, 2))
             setError(null)
-        } catch (err: any) {
-            setError(err.message)
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err.message)
+            } else {
+                setError('An unknown error occurred')
+            }
         }
     }
 
@@ -34,8 +38,12 @@ export function JsonFormatter() {
             const parsed = JSON.parse(input)
             setOutput(JSON.stringify(parsed))
             setError(null)
-        } catch (err: any) {
-            setError(err.message)
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err.message)
+            } else {
+                setError('An unknown error occurred')
+            }
         }
     }
 
@@ -97,7 +105,7 @@ export function JsonFormatter() {
                     </div>
 
                     {/* Output Area */}
-                    <div className="flex flex-col rounded-2xl border border-border/40 bg-white dark:bg-zinc-950 shadow-2xl relative overflow-hidden group">
+                    <div className="flex flex-col rounded-2xl border border-border/50 bg-surface shadow-xl relative overflow-hidden group transition-all duration-300 hover:border-accent/40 hover:shadow-2xl">
                         <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] pointer-events-none" />
 
                         <div className="relative z-10 flex justify-between items-center p-4 border-b border-border/30 bg-surface/30">

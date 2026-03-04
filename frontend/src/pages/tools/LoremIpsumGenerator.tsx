@@ -19,13 +19,13 @@ export function LoremIpsumGenerator() {
     const [copied, setCopied] = useState(false)
 
     const generatedText = useMemo(() => {
-        let result = []
+        const result = []
 
         for (let p = 0; p < paras; p++) {
-            let paragraph = []
+            const paragraph = []
             for (let s = 0; s < sentsPerPara; s++) {
                 const sentenceLen = Math.floor(Math.random() * 8) + 6
-                let sentenceWords = []
+                const sentenceWords = []
                 for (let w = 0; w < sentenceLen; w++) {
                     sentenceWords.push(LOREM_WORDS[Math.floor(Math.random() * LOREM_WORDS.length)])
                 }
@@ -107,7 +107,6 @@ export function LoremIpsumGenerator() {
                                         min="1" max="50"
                                         value={paras}
                                         onChange={(e) => setParas(parseInt(e.target.value))}
-                                        className="w-full accent-accent bg-transparent hover:cursor-pointer"
                                     />
                                 </div>
 
@@ -121,7 +120,6 @@ export function LoremIpsumGenerator() {
                                         min="1" max="15"
                                         value={sentsPerPara}
                                         onChange={(e) => setSentsPerPara(parseInt(e.target.value))}
-                                        className="w-full accent-accent bg-transparent hover:cursor-pointer"
                                     />
                                 </div>
 
@@ -131,7 +129,7 @@ export function LoremIpsumGenerator() {
                                         className={`relative w-12 h-6 rounded-full transition-colors duration-300 ${includeHtml ? 'bg-accent' : 'bg-surface border border-border/50'}`}
                                     >
                                         <motion.div
-                                            className={`absolute top-1 left-1 w-4 h-4 rounded-full bg-white shadow-sm`}
+                                            className={`absolute top-1 left-1 w-4 h-4 rounded-full bg-surface shadow-sm`}
                                             animate={{ x: includeHtml ? 24 : 0 }}
                                             transition={{ type: "spring", stiffness: 500, damping: 30 }}
                                         />
@@ -150,7 +148,7 @@ export function LoremIpsumGenerator() {
                         animate={{ opacity: 1, x: 0 }}
                         className="lg:col-span-8 flex flex-col gap-6"
                     >
-                        <div className="flex flex-col rounded-2xl border border-border/40 bg-white dark:bg-zinc-950 shadow-2xl overflow-hidden group min-h-[400px]">
+                        <div className="flex flex-col rounded-2xl border border-border/50 bg-surface shadow-xl overflow-hidden group min-h-[400px] transition-all duration-300 hover:border-accent/40 hover:shadow-2xl">
                             <div className="flex justify-between items-center p-4 border-b border-border/30 bg-surface/30">
                                 <span className="text-sm font-medium text-tertiary uppercase tracking-widest pl-2">Output</span>
                                 <Button onClick={handleCopy} className="text-xs h-8 px-3 shadow-md shadow-accent/20">

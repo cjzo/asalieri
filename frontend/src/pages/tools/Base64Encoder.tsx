@@ -15,7 +15,7 @@ export function Base64Encoder() {
         setText(val)
         try {
             setBase64(btoa(unescape(encodeURIComponent(val))))
-        } catch (err) {
+        } catch {
             setBase64('Error encoding text')
         }
     }
@@ -25,7 +25,7 @@ export function Base64Encoder() {
         setBase64(val)
         try {
             setText(decodeURIComponent(escape(atob(val))))
-        } catch (err) {
+        } catch {
             setText('Invalid Base64 string')
         }
     }
@@ -100,7 +100,7 @@ export function Base64Encoder() {
                     </div>
 
                     {/* Base64 Area */}
-                    <div className="flex flex-col rounded-2xl border border-border/40 bg-white dark:bg-zinc-950 shadow-sm relative overflow-hidden transition-all focus-within:ring-1 focus-within:ring-accent/50 focus-within:border-accent/30 hover:border-border/80 group">
+                    <div className="flex flex-col rounded-2xl border border-border/50 bg-surface shadow-xl relative overflow-hidden transition-all duration-300 focus-within:ring-1 focus-within:ring-accent/50 focus-within:border-accent/30 hover:shadow-2xl hover:border-accent/40 group">
                         <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] pointer-events-none" />
 
                         <div className="relative z-10 flex justify-between items-center p-4 border-b border-border/30 bg-surface/30">

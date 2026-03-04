@@ -161,7 +161,7 @@ export function EmailSignatureGenerator() {
                         animate={{ opacity: 1, x: 0 }}
                         className="lg:col-span-7 flex flex-col gap-6"
                     >
-                        <div className="sticky top-12 p-8 rounded-2xl border border-border/40 bg-white dark:bg-zinc-950 shadow-2xl overflow-hidden group">
+                        <div className="sticky top-12 p-8 rounded-2xl border border-border/50 bg-surface shadow-xl overflow-hidden group transition-all duration-300 hover:border-accent/40 hover:shadow-2xl">
                             <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] pointer-events-none" />
 
                             <div className="relative z-10 flex flex-col gap-8">

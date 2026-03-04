@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { PenTool, Type, Key, Code, Hash, Link2 } from 'lucide-react'
+import { PenTool, Type, Key, Code, Hash, Link2, Calendar } from 'lucide-react'
 
 const TOOLS = [
     {
@@ -62,6 +62,16 @@ const TOOLS = [
         color: 'from-indigo-500/20 to-blue-500/20',
         border: 'group-hover:border-indigo-500/50',
         shadow: 'hover:shadow-[0_8px_30px_rgba(99,102,241,0.15)]'
+    },
+    {
+        id: 'availability-calendar',
+        name: 'Availability Calendar',
+        description: 'Design and export a single-month interactive calendar snapshot.',
+        icon: Calendar,
+        path: '/tools/calendar',
+        color: 'from-violet-500/20 to-purple-500/20',
+        border: 'group-hover:border-purple-500/50',
+        shadow: 'hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]'
     }
 ]
 

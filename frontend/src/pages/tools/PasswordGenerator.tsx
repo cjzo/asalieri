@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Input } from '../../components/ui/input'
 import { Button } from '../../components/ui/button'
@@ -21,7 +21,7 @@ export function PasswordGenerator() {
     const [password, setPassword] = useState('')
     const [copied, setCopied] = useState(false)
 
-    const generatePassword = () => {
+    const generatePassword = useCallback(() => {
         let pool = ''
         if (options.lower) pool += LOWER
         if (options.upper) pool += UPPER
@@ -41,12 +41,12 @@ export function PasswordGenerator() {
             result += pool[array[i] % pool.length]
         }
         setPassword(result)
-    }
+    }, [length, options, setPassword])
 
     // Generate on mount and when options change
     useEffect(() => {
         generatePassword()
-    }, [length, options])
+    }, [generatePassword])
 
     const toggleOption = (key: keyof typeof options) => {
         setOptions(prev => ({
@@ -106,7 +106,7 @@ export function PasswordGenerator() {
                     className="w-full flex flex-col gap-6"
                 >
                     {/* Main Display Box */}
-                    <div className="p-8 rounded-2xl border border-border/40 bg-white dark:bg-zinc-950 shadow-2xl relative overflow-hidden">
+                    <div className="p-8 rounded-2xl border border-border/50 bg-surface shadow-xl relative overflow-hidden transition-all duration-300 hover:border-accent/40 hover:shadow-2xl">
                         <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] pointer-events-none" />
 
                         <div className="relative z-10 flex flex-col gap-6">
@@ -181,7 +181,6 @@ export function PasswordGenerator() {
                                     min="4" max="64"
                                     value={length}
                                     onChange={(e) => setLength(parseInt(e.target.value))}
-                                    className="w-full accent-accent bg-transparent hover:cursor-pointer"
                                 />
                             </div>
                         </div>

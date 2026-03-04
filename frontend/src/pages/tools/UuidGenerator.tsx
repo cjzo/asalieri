@@ -16,7 +16,7 @@ export function UuidGenerator() {
     const [copied, setCopied] = useState(false)
 
     const generateUuids = () => {
-        let result = []
+        const result = []
         const limit = Math.min(Math.max(count, 1), 5000) // max 5000 to prevent crashing
 
         for (let i = 0; i < limit; i++) {
@@ -100,7 +100,7 @@ export function UuidGenerator() {
                                         min="1" max="100"
                                         value={count > 100 ? 100 : count}
                                         onChange={(e) => setCount(parseInt(e.target.value))}
-                                        className="w-full accent-accent bg-transparent hover:cursor-pointer mb-2"
+                                        className="mb-2"
                                     />
                                     <div className="flex gap-2">
                                         <Input
@@ -143,7 +143,7 @@ export function UuidGenerator() {
 
                     {/* Output Display */}
                     <div className="lg:col-span-7 flex flex-col gap-6">
-                        <div className="flex flex-col rounded-2xl border border-border/40 bg-white dark:bg-zinc-950 shadow-2xl relative overflow-hidden group h-full min-h-[400px]">
+                        <div className="flex flex-col rounded-2xl border border-border/50 bg-surface shadow-xl relative overflow-hidden group h-full min-h-[400px] transition-all duration-300 hover:border-accent/40 hover:shadow-2xl">
                             <div className="absolute inset-0 bg-grid-black/[0.02] dark:bg-grid-white/[0.02] pointer-events-none" />
 
                             <div className="relative z-10 flex justify-between items-center p-4 border-b border-border/30 bg-surface/30">
@@ -162,7 +162,7 @@ export function UuidGenerator() {
                                 <textarea
                                     readOnly
                                     value={output}
-                                    className="w-full h-full min-h-[300px] bg-transparent resize-none font-mono text-sm text-primary leading-relaxed focus:outline-none scrollbar-thin scrollbar-thumb-surface scrollbar-track-transparent"
+                                    className="w-full h-full min-h-[300px] bg-transparent resize-none font-mono text-sm text-primary leading-relaxed focus:outline-none"
                                     spellCheck={false}
                                 />
                             </div>
