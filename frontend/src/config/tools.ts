@@ -25,9 +25,6 @@ export interface ToolItem {
     category: ToolCategory
     icon: React.ElementType
     path: string
-    color: string
-    border: string
-    shadow: string
 }
 
 export const CATEGORIES: ToolCategory[] = [
@@ -50,10 +47,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Create professional, robust HTML email signatures.',
         category: 'Generators',
         icon: PenTool,
-        path: '/tools/email-signature',
-        color: 'from-blue-500/20 to-cyan-500/20',
-        border: 'group-hover:border-cyan-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(6,182,212,0.15)]'
+        path: '/tools/email-signature'
     },
     {
         id: 'lorem-ipsum',
@@ -61,10 +55,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Synthesize versatile placeholder text for prototypes.',
         category: 'Generators',
         icon: Type,
-        path: '/tools/lorem-ipsum',
-        color: 'from-amber-500/20 to-orange-500/20',
-        border: 'group-hover:border-orange-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]'
+        path: '/tools/lorem-ipsum'
     },
     {
         id: 'password-generator',
@@ -72,10 +63,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Generate high-entropy, secure credentials.',
         category: 'Security',
         icon: Key,
-        path: '/tools/password',
-        color: 'from-green-500/20 to-emerald-500/20',
-        border: 'group-hover:border-emerald-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]'
+        path: '/tools/password'
     },
     {
         id: 'json-formatter',
@@ -83,10 +71,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Format, validate, and explore JSON payloads.',
         category: 'Development',
         icon: Braces,
-        path: '/tools/json',
-        color: 'from-purple-500/20 to-fuchsia-500/20',
-        border: 'group-hover:border-fuchsia-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(217,70,239,0.15)]'
+        path: '/tools/json'
     },
     {
         id: 'base64-encoder',
@@ -94,10 +79,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Instantly encode or decode strings and files.',
         category: 'Encoding & Decoding',
         icon: Link2,
-        path: '/tools/base64',
-        color: 'from-pink-500/20 to-rose-500/20',
-        border: 'group-hover:border-rose-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(244,63,94,0.15)]'
+        path: '/tools/base64'
     },
     {
         id: 'uuid-generator',
@@ -105,10 +87,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Bulk generation of standard unique identifiers.',
         category: 'Generators',
         icon: Hash,
-        path: '/tools/uuid',
-        color: 'from-indigo-500/20 to-blue-500/20',
-        border: 'group-hover:border-indigo-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(99,102,241,0.15)]'
+        path: '/tools/uuid'
     },
     {
         id: 'availability-calendar',
@@ -116,10 +95,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Design and export a single-month interactive calendar snapshot.',
         category: 'Generators',
         icon: Calendar,
-        path: '/tools/calendar',
-        color: 'from-violet-500/20 to-purple-500/20',
-        border: 'group-hover:border-purple-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]'
+        path: '/tools/calendar'
     },
 
     // --- Batch 1: Encoding, Decoding & Network ---
@@ -129,10 +105,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Safely encode or decode URLs and query strings.',
         category: 'Encoding & Decoding',
         icon: Globe,
-        path: '/tools/url',
-        color: 'from-sky-500/20 to-blue-500/20',
-        border: 'group-hover:border-sky-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(14,165,233,0.15)]'
+        path: '/tools/url'
     },
     {
         id: 'html-encoder',
@@ -140,10 +113,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Encode text to HTML entities or decode them back.',
         category: 'Encoding & Decoding',
         icon: FileCode,
-        path: '/tools/html-entities',
-        color: 'from-orange-500/20 to-red-500/20',
-        border: 'group-hover:border-orange-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]'
+        path: '/tools/html-entities'
     },
     {
         id: 'jwt-decoder',
@@ -151,10 +121,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Decode and inspect JSON Web Tokens instantly.',
         category: 'Encoding & Decoding',
         icon: Shield,
-        path: '/tools/jwt',
-        color: 'from-rose-500/20 to-pink-500/20',
-        border: 'group-hover:border-rose-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(244,63,94,0.15)]'
+        path: '/tools/jwt'
     },
     {
         id: 'xml-formatter',
@@ -162,10 +129,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Format, minify, and validate XML syntax instantly.',
         category: 'Encoding & Decoding',
         icon: Code,
-        path: '/tools/xml',
-        color: 'from-emerald-500/20 to-green-500/20',
-        border: 'group-hover:border-emerald-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]'
+        path: '/tools/xml'
     },
     {
         id: 'unicode-converter',
@@ -173,10 +137,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert between text and Unicode encoding formats.',
         category: 'Encoding & Decoding',
         icon: Type,
-        path: '/tools/unicode',
-        color: 'from-fuchsia-500/20 to-purple-500/20',
-        border: 'group-hover:border-fuchsia-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(217,70,239,0.15)]'
+        path: '/tools/unicode'
     },
     {
         id: 'ip-lookup',
@@ -184,10 +145,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Look up IP address location, ISP, and other metadata.',
         category: 'Network',
         icon: Activity,
-        path: '/tools/ip',
-        color: 'from-blue-500/20 to-indigo-500/20',
-        border: 'group-hover:border-blue-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]'
+        path: '/tools/ip'
     },
 
     // --- Batch 2: Security & Generators ---
@@ -197,10 +155,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Generate MD5, SHA-1, SHA-256 hashes from text.',
         category: 'Security',
         icon: Lock,
-        path: '/tools/hash',
-        color: 'from-slate-500/20 to-gray-500/20',
-        border: 'group-hover:border-slate-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(100,116,139,0.15)]'
+        path: '/tools/hash'
     },
     {
         id: 'text-encryption',
@@ -208,10 +163,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Encrypt and decrypt text using AES block ciphers.',
         category: 'Security',
         icon: Shield,
-        path: '/tools/encryption',
-        color: 'from-zinc-500/20 to-neutral-500/20',
-        border: 'group-hover:border-zinc-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(113,113,122,0.15)]'
+        path: '/tools/encryption'
     },
     {
         id: 'qr-generator',
@@ -219,10 +171,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Generate customizable QR codes from text or URLs.',
         category: 'Generators',
         icon: QrCode,
-        path: '/tools/qr',
-        color: 'from-stone-500/20 to-zinc-500/20',
-        border: 'group-hover:border-stone-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(120,113,108,0.15)]'
+        path: '/tools/qr'
     },
     {
         id: 'gradient-generator',
@@ -230,10 +179,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Create beautiful CSS gradients visually.',
         category: 'Generators',
         icon: Palette,
-        path: '/tools/gradient',
-        color: 'from-pink-500/20 to-orange-500/20',
-        border: 'group-hover:border-pink-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)]'
+        path: '/tools/gradient'
     },
     {
         id: 'word-counter',
@@ -241,10 +187,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Count words, characters, sentences, and paragraphs.',
         category: 'Generators',
         icon: AlignLeft,
-        path: '/tools/word-counter',
-        color: 'from-teal-500/20 to-emerald-500/20',
-        border: 'group-hover:border-teal-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)]'
+        path: '/tools/word-counter'
     },
 
     // --- Batch 3: Text Tools ---
@@ -254,10 +197,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert text casing between Title, Camel, Snake, and more.',
         category: 'Text Tools',
         icon: CaseSensitive,
-        path: '/tools/case',
-        color: 'from-violet-500/20 to-fuchsia-500/20',
-        border: 'group-hover:border-violet-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(139,92,246,0.15)]'
+        path: '/tools/case'
     },
     {
         id: 'markdown-preview',
@@ -265,10 +205,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Write Markdown with live preview and HTML export.',
         category: 'Text Tools',
         icon: FileText,
-        path: '/tools/markdown',
-        color: 'from-sky-500/20 to-indigo-500/20',
-        border: 'group-hover:border-sky-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(14,165,233,0.15)]'
+        path: '/tools/markdown'
     },
     {
         id: 'markdown-to-html',
@@ -276,10 +213,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert Markdown strings into raw HTML markup.',
         category: 'Text Tools',
         icon: FileCode,
-        path: '/tools/markdown-html',
-        color: 'from-blue-500/20 to-cyan-500/20',
-        border: 'group-hover:border-blue-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]'
+        path: '/tools/markdown-html'
     },
     {
         id: 'diff-checker',
@@ -287,10 +221,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Compare texts and highlight differences side-by-side.',
         category: 'Text Tools',
         icon: ArrowRightLeft,
-        path: '/tools/diff',
-        color: 'from-red-500/20 to-rose-500/20',
-        border: 'group-hover:border-red-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(239,68,68,0.15)]'
+        path: '/tools/diff'
     },
     {
         id: 'text-to-slug',
@@ -298,10 +229,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert strings into URL-friendly slug formats.',
         category: 'Text Tools',
         icon: Link2,
-        path: '/tools/slug',
-        color: 'from-emerald-500/20 to-teal-500/20',
-        border: 'group-hover:border-emerald-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]'
+        path: '/tools/slug'
     },
     {
         id: 'chinese-converter',
@@ -309,10 +237,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert between Traditional and Simplified Chinese.',
         category: 'Text Tools',
         icon: Languages,
-        path: '/tools/chinese',
-        color: 'from-red-500/20 to-orange-500/20',
-        border: 'group-hover:border-red-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(239,68,68,0.15)]'
+        path: '/tools/chinese'
     },
     {
         id: 'color-converter',
@@ -320,10 +245,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Translate HEX, RGB, and HSL color values.',
         category: 'Text Tools',
         icon: Pipette,
-        path: '/tools/color',
-        color: 'from-fuchsia-500/20 to-pink-500/20',
-        border: 'group-hover:border-fuchsia-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(217,70,239,0.15)]'
+        path: '/tools/color'
     },
 
     // --- Batch 4: Converters & Math ---
@@ -333,10 +255,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert Unix timestamps to localized human dates.',
         category: 'Converters',
         icon: Clock,
-        path: '/tools/timestamp',
-        color: 'from-indigo-500/20 to-violet-500/20',
-        border: 'group-hover:border-indigo-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(99,102,241,0.15)]'
+        path: '/tools/timestamp'
     },
     {
         id: 'json-to-csv',
@@ -344,10 +263,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Flatten structured JSON objects into CSV data.',
         category: 'Converters',
         icon: Table,
-        path: '/tools/json-csv',
-        color: 'from-green-500/20 to-emerald-500/20',
-        border: 'group-hover:border-green-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(34,197,94,0.15)]'
+        path: '/tools/json-csv'
     },
     {
         id: 'image-to-base64',
@@ -355,10 +271,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert raw images into Base64 data strings.',
         category: 'Converters',
         icon: ImageIcon,
-        path: '/tools/image-base64',
-        color: 'from-blue-500/20 to-sky-500/20',
-        border: 'group-hover:border-blue-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]'
+        path: '/tools/image-base64'
     },
     {
         id: 'number-base',
@@ -366,10 +279,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Convert between binary, octal, decimal, and hex.',
         category: 'Math & Calculators',
         icon: Binary,
-        path: '/tools/number-base',
-        color: 'from-orange-500/20 to-amber-500/20',
-        border: 'group-hover:border-orange-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)]'
+        path: '/tools/number-base'
     },
     {
         id: 'unit-converter',
@@ -377,10 +287,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Translate lengths, weights, temperatures, and areas.',
         category: 'Converters',
         icon: Ruler,
-        path: '/tools/units',
-        color: 'from-cyan-500/20 to-teal-500/20',
-        border: 'group-hover:border-cyan-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(6,182,212,0.15)]'
+        path: '/tools/units'
     },
 
     // --- Batch 5: Development Tools ---
@@ -390,10 +297,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Mock and validate regular expressions.',
         category: 'Development',
         icon: Regex,
-        path: '/tools/regex',
-        color: 'from-purple-500/20 to-violet-500/20',
-        border: 'group-hover:border-purple-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(168,85,247,0.15)]'
+        path: '/tools/regex'
     },
     {
         id: 'code-minifier',
@@ -401,10 +305,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Compress JS, CSS, and HTML files client-side.',
         category: 'Development',
         icon: Minimize2,
-        path: '/tools/minifier',
-        color: 'from-red-500/20 to-orange-500/20',
-        border: 'group-hover:border-red-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(239,68,68,0.15)]'
+        path: '/tools/minifier'
     },
     {
         id: 'sql-formatter',
@@ -412,10 +313,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Beautify and standardize structural SQL queries.',
         category: 'Development',
         icon: FileCode,
-        path: '/tools/sql',
-        color: 'from-teal-500/20 to-emerald-500/20',
-        border: 'group-hover:border-teal-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(20,184,166,0.15)]'
+        path: '/tools/sql'
     },
     {
         id: 'color-picker',
@@ -423,10 +321,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Extract exact matching colors from visual palettes.',
         category: 'Development',
         icon: Pipette,
-        path: '/tools/picker',
-        color: 'from-pink-500/20 to-rose-500/20',
-        border: 'group-hover:border-pink-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(236,72,153,0.15)]'
+        path: '/tools/picker'
     },
     {
         id: 'html-preview',
@@ -434,10 +329,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Test render raw DOM trees securely.',
         category: 'Development',
         icon: Eye,
-        path: '/tools/html-preview',
-        color: 'from-sky-500/20 to-cyan-500/20',
-        border: 'group-hover:border-sky-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(14,165,233,0.15)]'
+        path: '/tools/html-preview'
     },
     {
         id: 'json-validator',
@@ -445,10 +337,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Validate deep object structs against draft schemas.',
         category: 'Development',
         icon: CheckCircle2,
-        path: '/tools/json-schema',
-        color: 'from-emerald-500/20 to-teal-500/20',
-        border: 'group-hover:border-emerald-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(16,185,129,0.15)]'
+        path: '/tools/json-schema'
     },
     {
         id: 'json-to-ts',
@@ -456,10 +345,7 @@ export const TOOLS: ToolItem[] = [
         description: 'Infer static interfaces from dynamic JSON trees.',
         category: 'Development',
         icon: FileJson,
-        path: '/tools/json-ts',
-        color: 'from-blue-500/20 to-indigo-500/20',
-        border: 'group-hover:border-blue-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(59,130,246,0.15)]'
+        path: '/tools/json-ts'
     },
     {
         id: 'json-diff',
@@ -467,9 +353,6 @@ export const TOOLS: ToolItem[] = [
         description: 'Compare deep JSON nodes for granular parity checks.',
         category: 'Development',
         icon: RefreshCw,
-        path: '/tools/json-diff',
-        color: 'from-fuchsia-500/20 to-purple-500/20',
-        border: 'group-hover:border-fuchsia-500/50',
-        shadow: 'hover:shadow-[0_8px_30px_rgba(217,70,239,0.15)]'
+        path: '/tools/json-diff'
     }
 ]
