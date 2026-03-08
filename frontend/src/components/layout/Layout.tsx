@@ -1,9 +1,28 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Header } from './Header'
 import { useRef, useEffect } from 'react'
 
+const BASE_TITLE = 'asalieri'
+
+function pathToPageTitle(pathname: string): string {
+    if (pathname === '/') return BASE_TITLE
+    if (pathname === '/tools') return `tools | ${BASE_TITLE}`
+    const match = pathname.match(/^\/tools\/(.+)$/)
+    if (match) {
+        const slug = match[1]
+        const title = slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+        return `${title} | ${BASE_TITLE}`
+    }
+    return BASE_TITLE
+}
+
 export function Layout() {
     const glowRef = useRef<HTMLDivElement>(null)
+    const location = useLocation()
+
+    useEffect(() => {
+        document.title = pathToPageTitle(location.pathname)
+    }, [location.pathname])
 
     useEffect(() => {
         const handleMove = (e: MouseEvent) => {
