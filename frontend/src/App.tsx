@@ -53,6 +53,7 @@ import { HtmlPreview } from './pages/tools/HtmlPreview'
 import { JsonSchemaValidator } from './pages/tools/JsonSchemaValidator'
 import { JsonToTypeScript } from './pages/tools/JsonToTypeScript'
 import { JsonDiff } from './pages/tools/JsonDiff'
+import { BibtexCitationFormatter } from './pages/tools/BibtexCitationFormatter'
 
 function App() {
   return (
@@ -112,6 +113,7 @@ function App() {
             <Route path="/tools/json-schema" element={<JsonSchemaValidator />} />
             <Route path="/tools/json-ts" element={<JsonToTypeScript />} />
             <Route path="/tools/json-diff" element={<JsonDiff />} />
+            <Route path="/tools/citations" element={<BibtexCitationFormatter />} />
           </Route>
         </Route>
       </Routes>

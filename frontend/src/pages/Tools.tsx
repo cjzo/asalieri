@@ -82,8 +82,7 @@ export function Tools() {
                                     className="h-full"
                                 >
                                     <Link to={tool.path} className="block h-full group outline-none">
-                                        <div className="relative h-full flex flex-col p-6 rounded-2xl border border-border/40 bg-surface/40 backdrop-blur-sm overflow-hidden transition-all duration-500 hover:-translate-y-1.5 group-hover:border-accent/50 hover:shadow-[0_8px_30px_var(--tool-glow)]">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 opacity-0 group-hover:opacity-10 transition-opacity duration-500" />
+                                        <div className="relative h-full flex flex-col p-6 rounded-2xl border border-border/40 bg-surface/40 backdrop-blur-sm overflow-hidden transition-transform duration-300 ease-out hover:-translate-y-1.5 group-hover:border-accent/50">
                                             <div className="relative z-10 flex flex-col h-full">
                                                 <div className="mb-4 inline-flex p-2.5 rounded-xl bg-surface/80 border border-border/50 text-tertiary group-hover:text-primary transition-colors duration-300 shadow-sm self-start">
                                                     <tool.icon className="w-5 h-5 stroke-[1.5]" />

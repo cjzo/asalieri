@@ -4,7 +4,7 @@ import {
     AlignLeft, CaseSensitive, FileText, ArrowRightLeft,
     Languages, Pipette, Clock, Table, Image as ImageIcon,
     Binary, Ruler, Regex, Minimize2, Braces, Eye, CheckCircle2,
-    Activity, Lock, RefreshCw
+    Activity, Lock, RefreshCw, BookText
 } from 'lucide-react'
 
 export type ToolCategory =
@@ -354,5 +354,13 @@ export const TOOLS: ToolItem[] = [
         category: 'Development',
         icon: RefreshCw,
         path: '/tools/json-diff'
+    },
+    {
+        id: 'bibtex-citation',
+        name: 'Citation Formatter',
+        description: 'Render BibTeX into APA, MLA, Chicago, Harvard, or IEEE references ready to paste.',
+        category: 'Text Tools',
+        icon: BookText,
+        path: '/tools/citations'
     }
 ]
