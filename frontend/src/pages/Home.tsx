@@ -3,6 +3,7 @@ import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import { KineticSearch } from '../components/search/KineticSearch'
 import { ContextPills, CONTEXTS } from '../components/search/ContextPills'
 import { ResultCard, ToolResult } from '../components/results/ResultCard'
+import { searchTools } from '../lib/search'
 
 export function Home() {
     const [query, setQuery] = useState('')
@@ -19,25 +20,12 @@ export function Home() {
         setIsSearching(true)
         setLoading(true)
 
-        try {
-            const response = await fetch('/api/search/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query, context })
-            })
-
-            if (response.ok) {
-                const data = await response.json()
-                setResults(data.results)
-                setAiExamples(data.ai_examples ?? [])
-            } else {
-                console.error("Failed to fetch results")
-            }
-        } catch (err) {
-            console.error("Error connecting to backend", err)
-        } finally {
-            setLoading(false)
-        }
+        // Search runs fully client-side so the site works without a backend
+        // (e.g. on Vercel). The ranking logic mirrors backend/app/core/ranking.py.
+        const { results: ranked, ai_examples } = searchTools(query, context)
+        setResults(ranked)
+        setAiExamples(ai_examples)
+        setLoading(false)
     }
 
     return (
